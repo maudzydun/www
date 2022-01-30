@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Бутстрап</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootsrap.css">
+  </head>
+  <body>
+      <header>
+        <!-- создаем обьект в шапке сайта который сразу будет невидим по умолчанию  -->
+        <div class="bg-light collapse" id="header-hiden">
+          <div class="container"> 
+            <div class="row">
+              <!-- прописываем что внутренние отступы по вертикали будут 4 ширина колонки , при расширении экрана 768 пикселей и высше будет 7, при расширении экрана от 576 до 768 пикселей будет ширина 8 , а все что ниже 576 пикселей будет ширина 100% -->
+              <div class="col-sm-8 col-md-7 py-4">
+                <h3>Информация о сайте </h3>
+                <!-- Написать здесь что такое за клас текст мютед -->
+                <p class="text-muted">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil placeat nulla amet velit blanditiis adipisci, veniam distinctio a exercitationem natus, nisi fugit quo dolores aliquam beatae, sapiente consequatur soluta! Maiores?
+                </p>
+              </div>
+              <!-- внутринние отступы по вертикали - ширина 4 колонки, отступ между первой колонкой и второй будет 1 колонка и остальное будет занимать вторая колонка, при расширении экрана 576 пикселей и высше будет 4 колонки  -->
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h3>Контакты</h3>
+                <!-- из списка сделаем просто блоки друг под другом без кружечков -->
+                <ul class="list-unstyled">
+                  <li><a href="https://www.instagram.com/sema.zelenskiy/" class="text-muted" target="_blank">Instagram</a></li>
+                  <li>+380632761621</li>
+                  <li>semenzelenskij@gmail.com</li>
+                  <li><a href="https://github.com/maudzydun" class="text-muted" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- пишем видимую часть -->
+        <!-- создаем темную шапку которая растянется на всю ширину экрана(навбар дарк) и светлый задний фон и маленькая тень -->
+        <div class="navbar-light bg-light shadow-sm">
+          <!-- распологаться элементы будут по технологии флексбокс и обьекты будут располгаться на всю ширину по разным бокам  -->
+          <div class="container d-flex justify-content-between">
+            <!-- создаем логотип , для этого есть специальный класс навбар бренд и делаем чтобы он был жырным -->
+            <a href="E:\www\index.html" class="navbar-brand fw-bold">Maudzydun</a>
+            <!-- дальше создаем кнопку при нажатии на которую будет отображаться наше скрытое меню . Для этоого прописываем спецальный класс навбар тогл и колапсед , указываем такие характеристики как дата тогл - колапс и дата таргет - указываем на айди того обьекта с которым мы будем работать , тоесть хидер хиден -->
+            <button class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#header-hiden">
+              <!-- прописываем специальную кнопку меню при нажатии на которую у нас наконец начнет отображаться наше скрытое меню-->
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <!-- создаем контейнер для статей . my-5 - внешние отступы сверху и снизу  -->
+        <div class="container my-5">
+          <h1 class="text-center display-3 fw-normal">Конспекты лекций</h1>
+          <!-- создаем див который будет работать по технологии флекс бокс и элементы внутри мы сможем перекидывать на новые строки и обьекты будут располгаться на всю ширину по разным бокам -->
+          <div class="d-flex flex-wrap justify-content-between"> 
+          <!-- внутри мы будем создавать сами блоки со статьями (карточки) отступ мерджин ботом-4 и небольшая тень -->
+          <!-- так же отдельно в нашем файле цсс со стилями прописываем для класса кард что они будут иметь ширину скажем 300 пикселей  -->
+          
+<!-- стили для кнопок  -->
+            <div class="card mb-4 shadow-sm">
+              <h3 class="text-center">Стили для кнопок</h3>
+              <img src="myimg/btn.JPG" alt="Стили для кнопок" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  В этом конспекте у нас цвета для кнопок, возможности создать активные и не активные кнопки/ссылки и групировка кнопок в группы и тулбары , возможность размещать кнопки вертикально 
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="bs-for-btn.html" target="_blank">Перейти</a></button>
+                  </div>
+                  <p class="text-muted">30.01.2022</p>
+                </div>
+              </div>
+            </div>
+<!-- стили для текста  -->
+            <div class="card mb-4 shadow-sm">
+              <h3 class="text-center">Стили для текста</h3>
+              <img src="myimg/color.JPG" alt="адаптация под разные разрешения экранов" class="card-img-top">
+              <div class="card-body">
+                <p class="card-text">
+                  В этом конспекте у нас стили для текста, расположение текста и как бонус тема цвета , отступов , изображений , позиционирования и много разных примочек 
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary"><a href="bs5-style-for-text.html" target="_blank">Перейти</a></button>
+                  </div>
+                  <p class="text-muted">29.01.2022</p>
+                </div>
+              </div>
+            </div>
+<!-- Адаптация под разные разрешения экранов -->
+            <div class="card mb-4 shadow-sm">
+              <h3 class="text-center">Адаптация под разные разрешения экранов</h3>
+              <!-- внутри каждой из карточек будет изображение с классом кард имж топ -->
+              <img src="myimg/size-bs.JPG" alt="адаптация под разные разрешения экранов" class="card-img-top">
+              <!-- создаем основную часть карточки  -->
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate atque quam, natus dolor repellendus beatae placeat ducimus mollitia. 
+                </p>
+                <!-- дополнительно создаем 2 кнопки и говорим что они будут растягиваться на всю ширину блока и дополнительно что по вертикали они тоже будут по центру -->
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Перейти</button>
+                  </div>
+                  <div class="text-muted">28.01.2022</div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+              <h3 class="text-center">Презентационный блок - находится в верстке сайта на 14:45</h3>
+              <!-- внутри каждой из карточек будет изображение с классом кард имж топ -->
+              <img src="myimg/size-bs.JPG" alt="адаптация под разные разрешения экранов" class="card-img-top">
+              <!-- создаем основную часть карточки  -->
+              <div class="card-body">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate atque quam, natus dolor repellendus beatae placeat ducimus mollitia. 
+                </p>
+                <!-- дополнительно создаем 2 кнопки и говорим что они будут растягиваться на всю ширину блока и дополнительно что по вертикали они тоже будут по центру -->
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
+                    <button type="button" class="btn btn-sm btn-outline-secondary">Перейти</button>
+                  </div>
+                  <div class="text-muted">28.01.2022</div>
+                </div>
+              </div>
+            </div>
+<!-- Бутстрап сетки  -->
+            <div class="card mb-4 shadow-sm">
+                <h3 class="text-center">Бутстрап сетки</h3>
+                <!-- внутри каждой из карточек будет изображение с классом кард имж топ -->
+                <img src="https://www.formget.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2015/07/Bootstrap-grid.png.webp" alt="адаптация под разные разрешения экранов" class="card-img-top">
+                <!-- создаем основную часть карточки  -->
+                <div class="card-body">
+                  <p class="card-text">
+                    В этом конспекте рассказывается о сетках Бутстрап (grid). О особенностях построения и о том какие возможности открывают перед нами бутстрап сетки
+                  </p>
+                  <!-- дополнительно создаем 2 кнопки и говорим что они будут растягиваться на всю ширину блока и дополнительно что по вертикали они тоже будут по центру -->
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary"><a href="bs/bs-grid.html" target="_blank">Перейти</a></button>
+                    </div>
+                    <div class="text-muted">28.01.2022</div>
+                  </div>
+                </div>
+             </div>
+<!-- Все о css -->
+            <div class="card mb-4 shadow-sm">
+                <h3 class="text-center">Все о css</h3>
+                <!-- внутри каждой из карточек будет изображение с классом кард имж топ -->
+                <img src="myimg/GettyImages-461246108-1-800x941.jpg" alt="адаптация под разные разрешения экранов" class="card-img-top">
+                <!-- создаем основную часть карточки  -->
+                <div class="card-body">
+                  <p class="card-text">
+                    Если нужно подключить один тег к одному или двум стилям - это можно сделать прямо в html файле прописав style= внутри тега как атрибут
+                    Можно подключать стили через специальный тег его нужно прописывать внутри тега хед. 
+                  </p>
+                  <!-- дополнительно создаем 2 кнопки и говорим что они будут растягиваться на всю ширину блока и дополнительно что по вертикали они тоже будут по центру -->
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary"><a href="cssALL.html" target="_blank">Перейти</a></button>
+                    </div>
+                    <div class="text-muted">28.01.2022</div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+
+      </main>
+      <footer>
+
+      </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

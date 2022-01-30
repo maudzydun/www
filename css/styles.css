@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+
+.three {
+    color: rgb(177, 42, 69);
+}
+
+li .headyng {
+    background-color: blueviolet;
+}
+
+#bi b + i {
+    background-color: darkolivegreen;
+}
+
+#georg {
+    list-style: georgian;
+}
+
+#georg li + .bi {
+    background-color: darksalmon;
+}
+
+
+li[title="выборка по атрибуту"] {
+    color: rgb(240, 15, 15);
+}
+
+q {
+    color: darkgreen;
+}
+
+#identefecator {
+    color: dimgray;
+}
+
+/* ul p {
+    color: goldenrod;
+} */
+
+p.three {
+    color: rgb(3, 0, 168);
+}
+
+#identefecator, q, .three {
+    cursor:grab
+}
+
+/* коментарий */ 
+
+#fonts-google {
+    font-family: 'Neonderthaw', cursive;
+}
+
+
+.main-link {
+    color: rgb(3, 0, 168);
+    text-decoration:none;
+}
+
+.main-link:hover {
+    color: orange;
+    text-decoration: underline;
+    text-decoration-color: rgb(3, 0, 168);
+    cursor: progress;
+}
+
+#activ:active {
+    text-decoration: line-through;
+}
+
+a:visited {
+    color: gray;
+}
+
+input {color: mediumblue;}
+input:focus {
+    color: red;
+}
+
+textarea:disabled {
+    cursor: wait;
+}
+
+
+#after::after {
+    content: "123abvgd";
+    color: saddlebrown;
+    text-decoration: overline;
+}
+
+#bef::before {
+    content: attr(title);
+}
+
+#fs::first-letter {
+    color: cornflowerblue;
+}
+
+#fl::first-line {
+    color: rgb(58, 156, 58);
+}
+
+body {
+    background-color: rgb(215, 219, 223);
+    background-image: url("https://www.meme-arsenal.com/memes/11cc7ddd0aef04922162b8d55c69eb4f.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    /* height: 500px; */
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+#fblock {
+    background-color: rgb(255, 0, 0);
+    height: 200px;
+    width: 400px;
+    border: 7px solid rgb(10, 0, 95);
+}
+
+#so {
+    border: 7px solid rgb(100, 4, 4);
+    border-top: double;
+}
+
+#rad {
+    border: 8px dotted blue;
+    background-color: rgb(22, 209, 53);
+    height: 140px;
+    width: 400px;
+    border-radius: 15px 300px 12px;
+    padding: 5px 100px 0px 100px;
+    margin-bottom: 15px;
+}
+
+.marg {
+    background-color: rgb(104, 102, 9);
+    height: 100px;
+    width: 400px;
+    border: 7px solid rgb(0, 255, 55);
+    margin: 5px 10000px 20px 30px;
+    padding: 5px 10px 20px 15px;
+}
+
+.displey {
+    border: 8px dotted rgb(233, 84, 121);
+    background-color: rgb(255, 238, 0);
+    /* height: 140px;
+    width: 400px; */
+    border-radius: 15px 300px 12px;
+    padding: 5px 100px 0px 100px;
+    margin-bottom: 15px;
+    padding: 5px;
+    padding-left: 50px;
+
+    display: block;
+}
+
+#bakgroun-image {
+    color: rgb(255, 81, 0);
+    /* width: 250px;
+    height: 400px; */
+    background-image: url(../myimg/GettyImages-461246108-1-800x941.jpg);
+    background-position: right;
+    background-repeat: repeat;
+    background-size:contain;
+    background-attachment:fixed;
+    background-blend-mode:multiply;
+    background-color: rgb(32, 32, 43);
+}
+
+.block {
+    color: blanchedalmond;
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+    background: black;
+    float:none
+}
+
+
+div img {
+    height: 80px;
+    float: left;
+}
+
+.imp {
+    background-color: darkslategray;
+    width: 19%;
+    float: left;
+    margin: 5px;
+}
+
+.clear div{
+    background-color: forestgreen;
+    width: 19%;
+    float: left;
+    margin: 5px;
+}
+
+#none p {
+    clear: none;
+}
+
+#left p {
+    clear:left;
+}
+
+#right img {
+    float: right;
+}
+#right p {
+    clear: right;
+}
+
+#both p {
+    clear: both;
+}
+
+#pos {
+    background-color: grey;
+    width: 100%;
+    height: 95vh;
+    position: relative;
+}
+
+#pos :first-of-type {
+    position: absolute;
+    left: 50px;
+    top: 200px;
+}
+
+#pos :last-of-type {
+    background-color: hotpink;
+    /* position: fixed; */
+    top: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+#ls li {
+    display: inline-block;
+    background: rgb(136, 119, 107);
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(46, 54, 50);
+}
+
+#ls li:hover {
+    z-index: 1;
+    background: chocolate;
+    color: rgb(195, 224, 191);
+    cursor: pointer;
+    box-shadow: -19px 24px 26px 1px rgba(32,33,56,0.54);
+}
+
+.initial {
+    border: 2px solid rgb(182, 77, 77)!;
+    color: rgb(32, 18, 12);
+    background-color: rgb(72, 72, 179);
+}
+
+.initial span {
+    border: inherit;
+    color: initial;
+    all: unset;
+}
+
+.last {
+    color: rgb(189, 189, 91)!important;
+}
+
+
+/* Стили для текста  */
+
+#srifts li {
+    display: inherit;
+    width: 600px;
+    height: 150px;
+    overflow: auto;
+    border: 2px solid rgb(11, 34, 11);
+    background-color: rgba(255, 255, 255, 0.411);
+}
+
+@font-face {
+    font-family: caveat;
+    src: url(../fonts/Caveat-VariableFont_wght.ttf);
+}
+
+#caveat {
+    font-family: caveat;
+}
+
+/* Адаптивность и медиа запросы */
+
+@media(max-width: 320px) {
+    body {
+        background: red;
+    }
+}
+
+/* Анимации */
+
+#anim {
+    background-color: rgb(11, 34, 11);
+    color: rgb(215, 219, 223);
+    animation-name: anim2;
+    animation-duration: 7s;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate ;
+}
+
+@keyframes anim1 {
+    from {
+        background-color: rgb(11, 34, 11);
+        color: rgb(215, 219, 223);
+    }
+    to {
+        background-color: rgb(255, 81, 0);
+        color: black;
+    }
+}
+
+@keyframes anim2 {
+    0% {background-color: blanchedalmond;}
+    25%{background-color: blue;}
+    50%{background-color: red;}
+    75%{background-color: yellow;}
+    100%{background-color: green;}
+}
+
+/* flexbox */
+
+.Flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* flex-direction: column-reverse; */
+    align-items: center;
+}
+
+.Flexbox > div {
+    width: 40%;
+    /* height: 300px; */
+    border: 2px solid black;
+}
+
+.Flexbox1 {
+    margin-right: 50px;
+    flex-basis: 50px;
+    height: 300px;
+    order: 0;
+}
+
+.Flexbox2 {
+    flex: 1;
+    order: -1;
+    height: 250px;
+    align-self:stretch;
+}
+
+.Flexbox3 {
+    flex: 8;
+    order: 8;
+    height: 100px;
+    align-self: flex-start;
+}

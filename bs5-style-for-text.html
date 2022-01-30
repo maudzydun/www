@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Стили для текста</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootsrap.css">
+
+  </head>
+  <body>
+      <header>
+        <!-- создаем обьект в шапке сайта который сразу будет невидим по умолчанию  -->
+        <div class="bg-light collapse" id="header-hiden">
+          <div class="container"> 
+            <div class="row">
+              <!-- прописываем что внутренние отступы по вертикали будут 4 ширина колонки , при расширении экрана 768 пикселей и высше будет 7, при расширении экрана от 576 до 768 пикселей будет ширина 8 , а все что ниже 576 пикселей будет ширина 100% -->
+              <div class="col-sm-8 col-md-7 py-4">
+                <h3>Информация о сайте </h3>
+                <!-- Написать здесь что такое за клас текст мютед -->
+                <p class="text-muted">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil placeat nulla amet velit blanditiis adipisci, veniam distinctio a exercitationem natus, nisi fugit quo dolores aliquam beatae, sapiente consequatur soluta! Maiores?
+                </p>
+              </div>
+              <!-- внутринние отступы по вертикали - ширина 4 колонки, отступ между первой колонкой и второй будет 1 колонка и остальное будет занимать вторая колонка, при расширении экрана 576 пикселей и высше будет 4 колонки  -->
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h3>Контакты</h3>
+                <!-- из списка сделаем просто блоки друг под другом без кружечков -->
+                <ul class="list-unstyled">
+                  <li><a href="https://www.instagram.com/sema.zelenskiy/" class="text-muted" target="_blank">Instagram</a></li>
+                  <li>+380632761621</li>
+                  <li>semenzelenskij@gmail.com</li>
+                  <li><a href="https://github.com/maudzydun" class="text-muted" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- пишем видимую часть -->
+        <!-- создаем темную шапку которая растянется на всю ширину экрана(навбар дарк) и светлый задний фон и маленькая тень -->
+        <div class="navbar-light bg-light shadow-sm">
+          <!-- распологаться элементы будут по технологии флексбокс и обьекты будут располгаться на всю ширину по разным бокам  -->
+          <div class="container d-flex justify-content-between">
+            <!-- создаем логотип , для этого есть специальный класс навбар бренд и делаем чтобы он был жырным -->
+            <a href="E:\www\index.html" class="navbar-brand fw-bold">Maudzydun</a>
+            <!-- дальше создаем кнопку при нажатии на которую будет отображаться наше скрытое меню . Для этоого прописываем спецальный класс навбар тогл и колапсед , указываем такие характеристики как дата тогл - колапс и дата таргет - указываем на айди того обьекта с которым мы будем работать , тоесть хидер хиден -->
+            <button class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#header-hiden">
+              <!-- прописываем специальную кнопку меню при нажатии на которую у нас наконец начнет отображаться наше скрытое меню-->
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="container">
+ <!-- главный блок  -->
+        <div>
+            <h1 class="text-center">Стили для текста</h1>
+            <p>Очень крутой тег kbd который есть и в обычном css, но в бутстрапе для него придумали очень крутой стиль. В основном можно использовать для таких вещей как <kbd>Ctrl + C</kbd> а вот так выглядит тег <mark>mark всего лишь немного выделяя текст</mark></p>
+        </div>
+ <!-- Margin и Pading в Bootstrap -->
+        <div>
+            <h3 class="text-center">Margin и Pading в Bootstrap</h3>
+            <p>
+                Margin и Pading работают не только с текстом но и с блоками. Чтобы добавить отступы: <br>
+                <div class="row">
+                    <div class="col-6">
+                        <ul>
+                            <li>mt - внешний сверху</li>
+                            <li>mb - внешний снизу</li>
+                            <li>me - внешний справа</li>
+                            <li>ms - внешний слева</li>
+                            <li>mx - внешний по обе стороны по горизонтали</li>
+                            <li>my - внешний по обе стороны по вертикали</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>pt - внутренний сверху</li>
+                            <li>pb - внутренний снизу</li>
+                            <li>pe - внутренний справа</li>
+                            <li>ps - внутренний слева</li>
+                            <li>px - внутренний по обе стороны по горизонтали</li>
+                            <li>py - внутренний по обе стороны по вертикали</li>
+                        </ul>
+                    </div>
+                    <div class="col-12">И дальше -1 , -2 и так до 5ти - будет размер отступа , если нужно больше - прописываем все в отдельно файле со стилями</div>
+                </div>
+            </p>
+        </div>
+<!-- Цвета  -->
+        <div class="col-or-s">
+            <h3 class="text-center">Цвета</h3>
+            <div class="row">
+                <div class="col-2 text-primary">text-primary - вот такой цвет</div>
+                <div class="col-2 text-info offset-1">text-info - вот такой цвет</div>
+                <div class="col-2 text-secondary offset-1">text-secondary - вот такой цвет</div>
+                <div class="col-2 text-success offset-1">text-success - вот такой цвет</div>
+                <div class="col-2 text-danger offset-1">text-danger - вот такой цвет</div>
+                <div class="col-2 text-warning offset-1">text-warning - вот такой цвет</div>
+                <div class="col-2 text-white offset-1">text-white - вот такой цвет</div>
+                <div class="col-2 text-light offset-1">text-light - вот такой цвет</div>
+                <div class="col-2 text-dark offset">text-dark - вот такой цвет</div>
+                <div class="col-2 text-body offset-1">text-body - вот такой цвет</div>
+                <div class="col-2 text-muted offset-1">text-muted - вот такой цвет</div>
+                <div class="col-2 text-black-50 offset-1">text-black-50 - вот такой цвет</div>
+                <div class="col-2 text-white-50 offset-1">text-white-50 - вот такой цвет</div>                
+            </div>
+
+        </div>
+<!-- Выравнивание текста  -->
+        <div>
+            <h3 class="text-center">Выравнивание текста</h3>
+            <ul>
+                <li>text-center - выравнивание текста по центру</li>
+                <li>text-start - выравнивание текста по левую сторону</li>
+                <li>text-end - выравнивание текста по правую сторону</li>
+                <li>text-xl-end - выравнивание текста по правую сторону при расширении экрана >= 1200px</li>
+                <li>-xs- < 576px; -sm- > 576px; -md- > 768px; -lg- > 992px; -xl- > 1200px; -xxl >= 1400px </li>
+            </ul>
+        </div>
+<!-- Разное -->
+        <div>
+            <h3 class="text-center ">Разное</h3>
+            <div>
+                text-nowrap - если у нас есть какой нибудь узкий блок где текст уходит вниз , но нам бы хотелось чтобы текст вышел за пределы блок вместо этого - писался в одну строку - испльзуем этот клас <br>
+                text-wrap - говорит о том что наш текст будет переноситься на новую строку при достижении края блока <br>
+                text-lowercase - переводит все символы в нижний регистр <br>
+                text-uppercase - переводит все символы в верхний регистр <br>
+                text-capitalize - переводит первые символы каждого слова в верхний регистр <br>
+                fw-bold - специальный класс для текста для жырности <br>
+                fw-bolder - еще более жырный <br>
+                fw-light - тонкий <br>
+                fw-lighter - тонюсенький <br>
+                fst-italic - под наклоном <br>
+                fst-normal - нормальный <br>
+                h1 - h6 - класс который превращает любой текст в заголовок 1-6 уровня <br>
+                <small>тег small - делает текст чуть меньше, можно прописывать внутри заголовков и т.д. и рекомендуется к нему применять клас - текст-мютед</small> <br>
+                display-1 класс бывает от 1 до 6 и делает наш текст больше (1-самый большой). Даже больше чем тег h1 <br>
+                lead - делает текст немного крупнее чем наш основной текст <br>
+            </div>
+        </div>
+<!-- Изображения  -->
+        <div class="row">
+            <h3 class="text-center">Изображения</h3>
+            <div class="karta col-3">
+                <img src="https://bit.ua/wp-content/uploads/2013/12/331.jpg" alt="молния" class="img-fluid">
+                <p >img-fluid - клас делает так чтобы наше изображение помещалось внутрь нашего блока по ширине проще говоря делает нашу картинку адаптивной и она теперь не ввылазит за размеры блока </p>
+            </div>
+            <div class="karta offset-1 col-3">
+                <img src="https://bit.ua/wp-content/uploads/2013/12/331.jpg" alt="молния" class="img-thumbnail">
+                <p>img-thumbnail - делает небольшую уобводку вокруг изображения с немного скругленными углами + этот стиль имеет те же свойства что и имж-флуид и картинка остается адаптивной </p>
+            </div>
+            <div>
+                <img src="https://bit.ua/wp-content/uploads/2013/12/331.jpg" alt="молния" class="rounded d-block mx-auto">
+                <p class="text-center">rounded - картинка будет иметь скругленные уголки без обводки, но без обводки и наша картинка в таком случае уже будет не адаптивной </p>
+            </div>
+        </div>
+<!-- Позиционирование  -->
+        <div>
+            <h3 class="text-center">Позиционирование</h3>
+            <div>
+                float-start - обьект размещается слева, и другие обьекты будут обтекать его по правую сторону <br>
+                float-end - обьект размещается справа, и другие обьекты будут обтекать его по левую сторону <br>
+                d-block - превращает наш обьект в блок и для него становятся доступны все функции как для блоков 
+                <ul>
+                    <li>mx-auto - мерджин х говорит что будет авто - то есть наш обьект распологается автоматически по центру по горизонтали </li>
+                </ul>
+                d-none - скрывает обьект так как его свойство становится дисплей нан <br>
+            </div>
+        </div>
+      </main>
+      <footer>
+
+      </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

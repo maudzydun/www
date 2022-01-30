@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Кнопки Бутстрап</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootsrap.css">
+
+  </head>
+  <body>
+      <header>
+        <!-- создаем обьект в шапке сайта который сразу будет невидим по умолчанию  -->
+        <div class="bg-light collapse" id="header-hiden">
+          <div class="container"> 
+            <div class="row">
+              <!-- прописываем что внутренние отступы по вертикали будут 4 ширина колонки , при расширении экрана 768 пикселей и высше будет 7, при расширении экрана от 576 до 768 пикселей будет ширина 8 , а все что ниже 576 пикселей будет ширина 100% -->
+              <div class="col-sm-8 col-md-7 py-4">
+                <h3>Информация о сайте </h3>
+                <!-- Написать здесь что такое за клас текст мютед -->
+                <p class="text-muted">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil placeat nulla amet velit blanditiis adipisci, veniam distinctio a exercitationem natus, nisi fugit quo dolores aliquam beatae, sapiente consequatur soluta! Maiores?
+                </p>
+              </div>
+              <!-- внутринние отступы по вертикали - ширина 4 колонки, отступ между первой колонкой и второй будет 1 колонка и остальное будет занимать вторая колонка, при расширении экрана 576 пикселей и высше будет 4 колонки  -->
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h3>Контакты</h3>
+                <!-- из списка сделаем просто блоки друг под другом без кружечков -->
+                <ul class="list-unstyled">
+                  <li><a href="https://www.instagram.com/sema.zelenskiy/" class="text-muted" target="_blank">Instagram</a></li>
+                  <li>+380632761621</li>
+                  <li>semenzelenskij@gmail.com</li>
+                  <li><a href="https://github.com/maudzydun" class="text-muted" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- пишем видимую часть -->
+        <!-- создаем темную шапку которая растянется на всю ширину экрана(навбар дарк) и светлый задний фон и маленькая тень -->
+        <div class="navbar-light bg-light shadow-sm">
+          <!-- распологаться элементы будут по технологии флексбокс и обьекты будут располгаться на всю ширину по разным бокам  -->
+          <div class="container d-flex justify-content-between">
+            <!-- создаем логотип , для этого есть специальный класс навбар бренд и делаем чтобы он был жырным -->
+            <a href="E:\www\index.html" class="navbar-brand fw-bold">Maudzydun</a>
+            <!-- дальше создаем кнопку при нажатии на которую будет отображаться наше скрытое меню . Для этоого прописываем спецальный класс навбар тогл и колапсед , указываем такие характеристики как дата тогл - колапс и дата таргет - указываем на айди того обьекта с которым мы будем работать , тоесть хидер хиден -->
+            <button class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#header-hiden">
+              <!-- прописываем специальную кнопку меню при нажатии на которую у нас наконец начнет отображаться наше скрытое меню-->
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="container">
+        <h1 class="text-center">Кнопки Бутстрап</h1>
+        <div>
+            Чтобы кнопка унаследовала основные свойства нужно прописать клас btn <br>
+            <div>
+                <h3 class="text-center">Цвета</h3>
+                <div>
+                    <button class="btn btn-primary">btn-primary</button>
+                    <button class="btn btn-info">btn-info</button>
+                    <button class="btn btn-secondary">btn-secondary</button>
+                    <button class="btn btn-success">btn-success</button>
+                    <button class="btn btn-danger">btn-danger</button>
+                    <button class="btn btn-warning">btn-warning</button>
+                    <button class="btn btn-white">btn-white</button>
+                    <button class="btn btn-light">btn-light</button>
+                    <button class="btn btn-dark">btn-dark</button>
+                    <button class="btn btn-body">btn-body</button>
+                    <button class="btn btn-muted">btn-muted</button>
+                    <button class="btn btn-link">btn-link</button>
+                    <a href="#" class="btn btn-outline-primary">btn-outline-primary</a>
+                    <a href="#" class="btn btn-outline-info">btn-outline-info</a>
+                    <a href="#" class="btn btn-outline-secondary">btn-outline-secondary</a>
+                    <a href="#" class="btn btn-outline-success">btn-outline-success</a>
+                    <a href="#" class="btn btn-outline-danger">btn-outline-danger</a>
+                    <a href="#" class="btn btn-outline-warning">btn-outline-warning</a>
+                    <input type="button" value="btn btn-outline-white" class="btn btn-outline-white">
+                    <input type="button" value="btn btn-outline-light" class="btn btn-outline-light">
+                    <input type="button" value="btn btn-outline-dark" class="btn btn-outline-dark">
+                    <input type="button" value="btn btn-outline-body" class="btn btn-outline-body">
+                    <input type="button" value="btn btn-outline-muted" class="btn btn-outline-muted">
+                    <input type="button" value="btn btn-outline-link" class="btn btn-outline-link">
+                </div>
+                <h3 class="text-center">Характеристики для кнопок</h3>
+                <div>
+                    <button class="btn btn-primary btn-lg">кнопка побольше btn-lg</button>
+                    <button class="btn btn-success btn-sm">кнопка поменьше btn-sm</button>
+                    <button class="btn btn-dark">кнопка без класа размера</button>
+                    <button class="btn btn-warning d-block w-100">d-block w-100</button>
+                    <button class="btn btn-primary active">active активная кнопка нужна чтобы показать например что мы находимся сейчас именно в этом меню</button>
+                    <button class="btn btn-dark" disabled>disabled прописуется в характеристиках button</button>
+                    <input type="button" class="btn btn-warning" value="disabled прописуется в характеристиках инпута" disabled>
+                    <a href="#" role="button" class="btn btn-info disabled" aria-disabled="true" tabindex='-1'>для ссылки role="button" aria-disabled="true" tabindex='-1' и в класе тоже прописать disabled</a>
+                    <a href="#" class="btn btn-secondary disabled" disabled>для ссылки можно просто в характеристиках и в классе просто disabled</a>
+                </div>
+                <h3 class="text-center">Групировка кнопок</h3>
+                <div>
+                    <h4>родительский класс указываем как btn-group</h4>
+                    <div class="btn-group">
+                        <button class="btn btn-primary">btn-primary</button>
+                        <button class="btn btn-info">btn-info</button>
+                        <button class="btn btn-secondary">btn-secondary</button>
+                    </div>
+                    <p>
+                        К группе кнопок тоже можно применять различные свойства: <br>
+                        btn-group-lg - группа больших кнопок<br>
+                        btn-group-sm - группа маленьких кнопок<br>
+                        btn-group-vertical - вертикальная группа кнопок<br>
+                    </p>
+                    <h4>для родительского класса указываем btn-toolbar</h4>
+                    <div class="btn-toolbar btn-group-vertical">
+                        <div class="btn-group ">
+                            <button class="btn btn-primary">btn-primary</button>
+                            <button class="btn btn-info">btn-info</button>
+                            <button class="btn btn-secondary">btn-secondary</button>
+                        </div>
+                        <div class="btn-group btn-group-vertical">
+                            <button class="btn btn-info">btn-info</button>
+                            <button class="btn btn-secondary">btn-secondary</button>
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-primary">btn-primary</button>
+                            <button class="btn btn-secondary">btn-secondary</button>
+                        </div>
+                    </div>
+                    <p>
+                        Кнопки групируются в один блок при этом видно небольшое разделение между ними <br>
+                        btn-group-vertical - каждый батон груп будет распологаться горизонтально , а второй ряд кнопок будет под ним и третий тоже будет ниже соответственно при этом наши кнопки будут растянуты на 100% ширины контейнера<br>
+                        если нужно еще создать дополнительные отступы между группами используем клас мерджин для груп 
+                    </p>
+                </div>
+            </div>
+        </div>
+      </main>
+      <footer>
+
+      </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
