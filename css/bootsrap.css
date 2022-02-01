@@ -4,6 +4,10 @@
     padding: 10px;
 }
 
+.card:hover{
+    overflow:auto;
+}
+
 .col-or-s {
     background-color: rgb(212, 208, 152);
 }
@@ -17,4 +21,10 @@ footer {
 
 .karta {
     width: 350px;
+}
+
+.block {
+    width: 200px;
+    height: 200px;
+    background: rgb(133, 133, 133);
 }
