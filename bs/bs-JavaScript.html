@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Бутстрап JavaScript</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootsrap.css">
+
+  </head>
+  <body>
+      <header>
+        <!-- создаем обьект в шапке сайта который сразу будет невидим по умолчанию  -->
+        <div class="bg-light collapse" id="header-hiden">
+          <div class="container"> 
+            <div class="row">
+              <!-- прописываем что внутренние отступы по вертикали будут 4 ширина колонки , при расширении экрана 768 пикселей и высше будет 7, при расширении экрана от 576 до 768 пикселей будет ширина 8 , а все что ниже 576 пикселей будет ширина 100% -->
+              <div class="col-sm-8 col-md-7 py-4">
+                <h3>Информация о сайте </h3>
+                <!-- Написать здесь что такое за клас текст мютед -->
+                <p class="text-muted">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil placeat nulla amet velit blanditiis adipisci, veniam distinctio a exercitationem natus, nisi fugit quo dolores aliquam beatae, sapiente consequatur soluta! Maiores?
+                </p>
+              </div>
+              <!-- внутринние отступы по вертикали - ширина 4 колонки, отступ между первой колонкой и второй будет 1 колонка и остальное будет занимать вторая колонка, при расширении экрана 576 пикселей и высше будет 4 колонки  -->
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h3>Контакты</h3>
+                <!-- из списка сделаем просто блоки друг под другом без кружечков -->
+                <ul class="list-unstyled">
+                  <li><a href="https://www.instagram.com/sema.zelenskiy/" class="text-muted" target="_blank">Instagram</a></li>
+                  <li>+380632761621</li>
+                  <li>semenzelenskij@gmail.com</li>
+                  <li><a href="https://github.com/maudzydun" class="text-muted" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- пишем видимую часть -->
+        <!-- создаем темную шапку которая растянется на всю ширину экрана(навбар дарк) и светлый задний фон и маленькая тень -->
+        <div class="navbar-light bg-light shadow-sm">
+          <!-- распологаться элементы будут по технологии флексбокс и обьекты будут располгаться на всю ширину по разным бокам  -->
+          <div class="container d-flex justify-content-between">
+            <!-- создаем логотип , для этого есть специальный класс навбар бренд и делаем чтобы он был жырным -->
+            <a href="E:\www\index.html" class="navbar-brand fw-bold">Maudzydun</a>
+            <!-- дальше создаем кнопку при нажатии на которую будет отображаться наше скрытое меню . Для этоого прописываем спецальный класс навбар тогл и колапсед , указываем такие характеристики как дата тогл - колапс и дата таргет - указываем на айди того обьекта с которым мы будем работать , тоесть хидер хиден -->
+            <button class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#header-hiden">
+              <!-- прописываем специальную кнопку меню при нажатии на которую у нас наконец начнет отображаться наше скрытое меню-->
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="container">
+        <h1 class="text-center">Бутстрап JavaScript</h1>
+        <h4>Подключение</h4>
+        <p>
+            Подключать файлы джава скрипт стоит в конце тега боди чтобы наш сайт быстрее прогружался когда он будет рабоать на удаленном сервере <br>
+            По видео Гоша сразу подключает джиквери а потом бутстрап бандл.мин.джис <br>
+            <code>< удалить script src="https://code.jquery.com/jquery-3.6.0.js">< удалить/script> </code> (удалить означает что нужно убрать пробелы и слово удалить) <br>
+            <code> < удалить script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js">< удалить /script> </code> это обычное подключени джава скрипта , бандл надо скачивать. А вообще после футера у меня на каждой странице есть подключение джава скрипта бутстрап так как это сказано в <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/" target="_blank">документации </a>
+        </p>
+        <h4>Как открыть или скрыть какой-нибудь обьект</h4>
+        <div class="row">
+            <div class="col-2">
+                <div>
+                    <a href="#hideObject" class="btn btn-success" data-bs-toggle='collapse' role="button" aria-expanded="false" aria-controls="hideObject">Показать меню</a>
+                    <div class="collapse hideO" id="hideObject">
+                        <div class="alert alert-info">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium temporibus maiores molestiae, in omnis, non architecto quia rerum perferendis iusto sapiente ipsa dolore excepturi? Asperiores dolorum eum molestias dolores similique.</p> 
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary my-2" data-bs-toggle="collapse" data-bs-target="#hideObject-2" aria-expanded="false" aria-controls="hideObject-2">Показать меню</button>
+                    <div class="collapse hideO" id="hideObject-2">
+                        <div class="alert alert-secondary">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium temporibus maiores molestiae, in omnis, non architecto quia rerum perferendis iusto sapiente ipsa dolore excepturi? Asperiores dolorum eum molestias dolores similique.</p> 
+                        </div>
+                    </div>
+
+                    <button class="btn btn-warning" data-bs-toggle="collapse" data-bs-target=".hideO" aria-expanded="false" aria-controls="hideObject-2 hideObject">Показать все</button>
+                </div>
+            </div>
+            <div class="col-10">
+                Для начала нужно создать кнопку-ссылку , в нашем случае ссылку у которой будет клас btn. <br>
+                В этой ссылке прописываем href="#hideObject" который нам потом понадобится. <br>
+                Далее нужно прописать такую характеристику как data-bs-toggle='collapse' , колапс - это функция отвечает за скрыть/показать обьект <br>
+                Еще можно прописать data-bs-target="#hideObject" где мы указываем айди обьекта с которым будем работать. Вместо айди мы можем указать клас как в css .myclass ; Таким образом наша кнопка может отвечать сразу за несколько блоков к примеру (и даже наверное и тег) <br>
+                role="button" - необходимо указать такой атрибут как роль и указать что это будет кнопка, но этот атрибут не является важным. Если его не указать все будет работать как прежде <br>
+                aria-expanded="false" - по умолчанию блок будет изначально скрыт <br>
+                aria-controls="hideObject" - здесь нужно указать тот блок с которым мы будем работать , его айди. В нашем случае это наш блок где мы указывали href="#hideObject" . Если нам понадобится работать с 2мя и более обьектами то их айди мы можем указывать через пробел внутри ареяконтролс<br>
+                Так как пока у нас еще нет обьекта #hideObject - пока ничего происходить и не будет <hr>
+                Дальше нужно создать наш обьект который будет скрытым по умолчанию и раскрываться при нажатии на кнопку. <br>
+                В первую очередь создаем блок с класом collapse и id="hideObject" <br>
+                И все , теперь в этот блок можно поместить все что угодно и он будет открываться при нажатии на батон 
+            </div>
+            <hr>
+            <p>При работе с JS мы работаем уже не с класами а с различными атрибутами. Если отключить JS атрибуты , такие как aria-expanded , aria-controls , data-bs-toggle и так далее работать не будут. При помощи этих атрибутов бутстрап выбирает нужные элементы и к ним добавляет нужные стили</p>
+        </div>
+        <h4>Модальное окно</h4>
+        <div class="row">
+            <div class="col-10">
+                Чтобы создать модально окно сначала наверное лучше всего создать кнопку которая будет отвечать за то чтобы это окно показать. Для кнопки мы прописываем такую характеристику как: data-bs-toggle="modal" ; и в data-bs-target="#modal-widow" указываем айди того обьекта с которым мы будем работать <hr>
+                Сам обьект который будет открываться при нажатии на эту кнопку можно создать в самом низу аштимл документа так как пока мы не нажмем на кнопку он показан не будет , но в примере чтобы потом было удобнее смотреть мы создадим его внутри нашего блока <hr>
+                <ol>
+                    <li>
+                        Чтобы создать модальное окно: создаем блок с класом modal и чтобы он появлялся плавно добавляем еще клас fade
+                        <ul>
+                            <li>В айди этого блока прописываем наш айди который мы указывали в дата бс таргет id="modal-widow" </li>
+                            <li>В документации прописано что нужно создать еще tabindex="-1" , но если не прописать - ничего не поменяется табиндекс говорит о том что наш обьект будет на слой ниже чем остальные</li>
+                            <li>role="dialog" - тоже не очень важный атрибут , но в документации указан</li>
+                            <li>aria-labelledby="modal-widow-label" - отвечает за подпись нашего окна , можно указать и свое название</li>
+                            <li>aria-hidden="true" - наше окно будет по умолчанию скрытое</li>
+                        </ul>
+                    </li>
+                    <li>После создания блока - наполняем этот блок элементами, для этого создаем блок с класом modal-dialog - основной класс для родительского элемента внутри которого будут помещаться все заголовки и текста. И дополнительно указываем role="document" как в документации (необязательно)</li>
+                    <li>Потом внутри модал диалога создается еще один ваный блок с класом modal-content внутри которого уже и будут помещаться заголовки и текст</li>
+                    <li>
+                        Чтобы создать заголовок опять создаем блок с класом modal-header и внутри уже помещаем наш заголовок
+                        <ul>
+                            <li>для заголовка прописываем клас modal-title</li>
+                            <li>Указываем айди id="modal-widow-label" . Айди это то что мы прописывали в самом первом блоке в поле aria-labelledby</li>
+                        </ul>
+                        Дальше в этом блоке можно еще прописать кнопку закрытия модального окна для этого создаем блок button
+                        <ul>
+                            <li>Прописываем type="button"</li>
+                            <li>class="btn-close"</li>
+                            <li>data-bs-dismiss="modal"</li>
+                            <li>aria-label="Close"</li>
+                            <li>Внутри можно прописать просто словами "закрыть" или "х" , но можно прописать специальный html символ "& times;" без пробела и для этого символа указываем атрибут aria-hidden="true" </li>
+                        </ul>
+                    </li>
+                    <li>Чтобы создать основную часть модального окна: создаем блок с класом modal-body и внутрь помещаем все обьекты которые нам нужны внутри (обычно какой-то текст)</li>
+                    <li>Чтобы создать футер - создаем блок с класом modal-footer и внутрь мы можем поместить опять же кнопку которая будет закрывать наше модальное окно</li>
+                </ol>
+            </div>
+            <div class="col-2">
+                <div><button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modal-window">Показать модальное окно</button></div>
+
+                <div>
+                    <div class="modal fade" id="modal-window" tabindex="-1" role="dialog" aria-labelledby="modal-window-label" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal-widow-label">Заголовок модального окна</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ut autem dolorum minima, deserunt officia, modi illum temporibus quibusdam soluta iusto nam similique asperiores vel beatae laudantium? Asperiores excepturi neque a molestias architecto iste nostrum eligendi unde. Magni quae, ut nam numquam iure cum repellendus aperiam. Qui, blanditiis nobis? Sint nemo explicabo aliquid accusamus sequi maxime corrupti, voluptatem laboriosam perspiciatis quibusdam sapiente suscipit totam rem eos, ullam quod aspernatur, qui unde culpa a? Quibusdam est dolorem sunt cumque illo. Nostrum, accusamus ea dolore debitis rerum aperiam exercitationem et ipsa. Fugit itaque sapiente, quidem architecto expedita dicta impedit dolore perferendis, maxime sunt, consequuntur tempore atque! Libero deleniti perferendis ab quis commodi dolore vitae architecto, voluptate suscipit possimus non id, minus voluptatem pariatur eaque labore ratione iusto! Quod maiores nulla cupiditate soluta labore reiciendis modi nostrum doloribus, at iste fuga odio quae accusantium velit maxime sapiente suscipit architecto nesciunt ipsa? Aliquam porro cum temporibus repellendus quasi cupiditate sed, explicabo ducimus repellat, eaque consectetur unde labore, distinctio blanditiis modi minima tempore recusandae eius numquam beatae et quaerat nam? Iste architecto totam provident voluptate! Harum, temporibus velit omnis dolor ab ipsam facere aperiam similique iure explicabo quisquam sequi alias odit minus sapiente laborum nostrum in eum minima. Perferendis illum quo obcaecati voluptatibus? Voluptas reiciendis nemo delectus distinctio saepe beatae eius molestias voluptatibus deleniti, consequatur autem quas iusto laborum obcaecati doloribus! Et animi labore corrupti, quaerat incidunt dolore esse minus! Fuga, dolor! Cupiditate laboriosam blanditiis aperiam ducimus quaerat. Tenetur itaque dolorem libero, cumque ad deserunt provident sint iste harum esse amet totam earum? Eius, tempore unde. Inventore eveniet iure aut autem iste voluptatum nulla molestias quo sequi dolores. Id rerum ipsam impedit minus tempora ipsum nihil non quisquam, incidunt fuga officia ullam voluptas, illum sequi cumque perferendis earum tenetur numquam! Ut expedita fugiat voluptatum doloremque dolorem iusto quas labore facilis ratione facere, tempore ea provident doloribus minus ipsam nesciunt, repellat consequuntur hic error quis iste, libero veniam! Repellendus mollitia beatae ut quidem necessitatibus sed, amet enim deserunt, dolorum tempora ipsum laudantium, facilis optio veritatis ducimus minima eaque quia facere ratione odit. Rerum, ipsam quae quaerat dolores enim dicta quidem corrupti, dolorem debitis laboriosam facere nesciunt soluta quis perspiciatis rem fugiat voluptates nemo consequatur. Delectus quisquam architecto optio assumenda, consequuntur iure repudiandae dolor! Praesentium adipisci reiciendis excepturi? Debitis est, rem repellendus hic quidem itaque dolorem blanditiis? Ab alias sint dolorum. Tempore sapiente architecto praesentium fugiat in, dicta commodi. Iure explicabo architecto placeat facilis nihil? Veniam reiciendis ullam repudiandae blanditiis, et sed nostrum? Asperiores facilis quae ullam, deserunt quas at unde ex veniam, labore quidem maxime! Voluptatum, tempora? Quo esse non excepturi voluptatum accusamus corporis libero veritatis hic? Cupiditate molestias ex recusandae vitae ratione illo officiis quam cum in, odit ipsam quibusdam fuga, voluptatem vel nemo deserunt iure! Cupiditate nisi, nostrum qui fugiat, possimus ad magni voluptatum earum similique saepe quo! Harum blanditiis sapiente voluptatum rerum deleniti aperiam est dolorum minima accusamus molestias porro hic necessitatibus dolore repellendus, ipsa odio mollitia amet error quis excepturi doloribus temporibus!</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Закрыть</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4>Раскрывающиеся списки</h4>
+        <div class="row">
+            <div class="col-8">
+                При нажатии на кнопку будет открываться так называемый раскрывающийся список <br>
+                Чтобы создать такую кнопку нужно создать блок у которого клас будет btn-group <br>
+                По умолчанию список будет открываться вниз , но мы так же можем добавить к батон групу клас который позволит открывать наш список 
+                    <li>dropstart - влево</li>
+                    <li>dropend - вправо</li>
+                    <li>dropup - вверх</li>
+                    <li>dropdown - вниз</li>
+                Кстати при открытии списка он открывается поверх текста и элементов, а не смещая дургие элементы как это делает колапс
+                <hr>
+                <ul>
+                    Внутри батон групы создаем нашу кнопку батон для которой прописываем 
+                    <li>Клас как обычно батон и батон цвет и дополнительно нужно указать клас dropdown-toggle</li>
+                    <li>data-bs-toggle="dropdown" - указываем за что отвечает эта кнопка - за дропдаун</li>
+                    <li>aria-haspopup="true" - атрибут который говорит о том что при нажатии на эту кнопку у нас будет открываться выпадающий список</li>
+                    <li>aria-expanded="false" - указываем что наш список будет изначально скрыт</li>
+                </ul><hr>
+                Внутри блока батон груп создаем еще один блок который будет иметь обязательно клас dropdown-menu <br>
+                Внутри мы можем создать к примеру ссылки у которых клас должен быть обязательно dropdown-item . Дополнительно к ссылкам можно прописывать такие класы как active и disabled <br>
+                Если у нас много элементов в выпадающем списке и нам нужно его как-то разделить - между ними нужно создать блок у которого будет клас dropdown-divider
+            </div>
+
+            <div class="col-4">
+                <div class="btn-group dropup">
+                    <button class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Раскрывающийся список</button>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">Ссылка</a>
+                        <a href="#" class="dropdown-item active">Ссылка с просто текстом который длинее</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item disabled">Другая ссылка</a>
+                        <a href="#" class="dropdown-item">Другая ссылка на другой раздел</a>
+                    </div>
+                </div>
+
+                <div class="btn-group dropstart" style="width: 320px">
+                    <button class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Авторизация на сайте</button>
+                    <div class="dropdown-menu">
+                        <form class="px-3 py-2">
+                            <div class="form-group">
+                                <label for="email-form-drop">Введите адрес электронной почты</label>
+                                <input type="email" class="form-control" id="email-form-drop" placeholder="myemail@examle.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass-form-drop">Введите пароль</label>
+                                <input type="password" class="form-control" id="pass-form-drop" placeholder="Examle123">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="check-form-drop" placeholder="Examle123">
+                                    <label for="check-form-drop" class="form-check-label">Запомнить меня</label>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">Создать новый аккаунт</a>
+                        <a href="#" class="dropdown-item">Забыли пароль?</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+      </main>
+      <footer>
+
+      </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../css/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
