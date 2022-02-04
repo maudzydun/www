@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <title>Основы JavaScript</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style_for_javascript.css">
+
+  </head>
+  <body class="container">
+      <header>
+        <!-- создаем обьект в шапке сайта который сразу будет невидим по умолчанию  -->
+        <div class="bg-light collapse" id="header-hiden">
+          <div class="container"> 
+            <div class="row">
+              <!-- прописываем что внутренние отступы по вертикали будут 4 ширина колонки , при расширении экрана 768 пикселей и высше будет 7, при расширении экрана от 576 до 768 пикселей будет ширина 8 , а все что ниже 576 пикселей будет ширина 100% -->
+              <div class="col-sm-8 col-md-7 py-4">
+                <h3>Информация о сайте </h3>
+                <!-- Написать здесь что такое за клас текст мютед -->
+                <p class="text-muted">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil placeat nulla amet velit blanditiis adipisci, veniam distinctio a exercitationem natus, nisi fugit quo dolores aliquam beatae, sapiente consequatur soluta! Maiores?
+                </p>
+              </div>
+              <!-- внутринние отступы по вертикали - ширина 4 колонки, отступ между первой колонкой и второй будет 1 колонка и остальное будет занимать вторая колонка, при расширении экрана 576 пикселей и высше будет 4 колонки  -->
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h3>Контакты</h3>
+                <!-- из списка сделаем просто блоки друг под другом без кружечков -->
+                <ul class="list-unstyled">
+                  <li><a href="https://www.instagram.com/sema.zelenskiy/" class="text-muted" target="_blank">Instagram</a></li>
+                  <li>+380632761621</li>
+                  <li>semenzelenskij@gmail.com</li>
+                  <li><a href="https://github.com/maudzydun" class="text-muted" target="_blank">GitHub</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- пишем видимую часть -->
+        <!-- создаем темную шапку которая растянется на всю ширину экрана(навбар дарк) и светлый задний фон и маленькая тень -->
+        <div class="navbar-light bg-light shadow-sm">
+          <!-- распологаться элементы будут по технологии флексбокс и обьекты будут располгаться на всю ширину по разным бокам  -->
+          <div class="container d-flex justify-content-between">
+            <!-- создаем логотип , для этого есть специальный класс навбар бренд и делаем чтобы он был жырным -->
+            <a href="E:\www\index.html" class="navbar-brand fw-bold">Maudzydun</a>
+            <!-- дальше создаем кнопку при нажатии на которую будет отображаться наше скрытое меню . Для этоого прописываем спецальный класс навбар тогл и колапсед , указываем такие характеристики как дата тогл - колапс и дата таргет - указываем на айди того обьекта с которым мы будем работать , тоесть хидер хиден -->
+            <button class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#header-hiden">
+              <!-- прописываем специальную кнопку меню при нажатии на которую у нас наконец начнет отображаться наше скрытое меню-->
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <main>
+        <!-- Подключение JavaScript -->
+        <h1>Подключение JavaScript</h1>
+        <ol>
+            <li>
+                Первый способ это прописать тег  script> И внутри его прописывать весь джава скрипт код </ script>
+            </li>
+            <li>
+                Создать отдельный файл в котором прописывать весь джава скрипт и потом это файл подулючать с наш документ. Для этого создаем тег скрипт и не внутри тега , а в характеристиках к открывающему тегу прописываем src="путь к нашему обьекту". Так как обьект может находится не только у нас на пк но и на удаленном сервере - мы можем прописать путь через http://путь к файлу .
+            </li>
+            <li>
+                Так как js прописывать нужно в самом конце странички то и загружается он самым последним на страничке. Но если нам нужно чтобы js загружался сразу мы можем прописать атрибут к нашему тегу script который называется async который позволяет загружать наш скрипт асинхронно со всей страничкой html. Этим атрибутом не рекомендуется злоупотреблять чтобы не замедлить загрузку всей странички
+            </li>
+            <li>
+                Одновременно мы можем подключать сразу несколько script файлов
+            </li>
+        </ol><hr>
+
+        <!-- переменные в JavaScript -->
+        <h1>Переменные в JavaScript</h1>
+        <div>
+            Чтобы создать переменную нужно прописать ключевое слово:
+            <ol>
+                <li>var - простейшая переменная</li>
+                <li>let - тоже простейшая переменная, но отличается областью видимости что мы сможем заметить в циклах или в функциях</li>
+                <li>const - переменная константа которую нельзя потом переопределить </li>
+            </ol>
+            <img src="img/Переменные.JPG" alt="Переменные">
+        </div><hr>
+
+        <!-- Операторы -->
+        <h1 class="mt-3">Операторы</h1>
+        <div class="d-flex">
+            <img src="img/математические_операции.JPG" alt="математические_операции" class="me-1">
+            <img src="img/унарные.JPG" alt="унарные">
+            <img src="img/ПриветВ.JPG" alt="ПриветВ" class="ms-1 h-100">
+        </div><hr>
+
+        <!-- Условные операторы  -->
+        <h1 class="mt-3">Условные операторы </h1>
+        <div>
+            <h4 class="text-center">if , else if , else</h4>
+            <img src="img/условные-операторы1.JPG" alt="условные-операторы1">
+            <div class="d-flex">
+                <div class="me-1">
+                    <h4 class="text-center">switchcase</h4>
+                    <img src="img/Свичкейс.JPG" alt="Свичкейс">
+                </div>
+                <div>
+                    <h4 class="text-center">Тернарный оператор</h4>
+                    <img src="img/Тернар.JPG" alt="Тернар">
+                </div>
+            </div>
+        </div><hr>
+
+        <!-- Масивы и их функции -->
+        <h1 class="mt-3">Масивы и их функции</h1>
+        <div>
+            <img src="img/масивы.JPG" alt="масивы" class="w-100 mb-1">
+            <img src="img/масивы2.JPG" alt="масивы2" class="w-100">
+        </div><hr>
+      </main>
+      <footer>
+
+      </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
