@@ -8,7 +8,79 @@
     <link rel="stylesheet" href="css/style_for_javascript.css">
 </head>
 <body>
-    
+    <a href="#" onclick="alert('привет')">Нажми на меня</a>
+    <!-- просто выводим привет в всплывающем окне при нажатии-->
+    <hr>
+
+    <a href="#" onclick="clickHref()">clickHref()</a>
+    <!-- Привет из JS функции -->
+    <hr>
+
+    <a href="#" onclick="clickA()" id="myA">clickHref()</a>
+    <!-- можно прописать стили которые будут применяться при нажатии на ссылку -->
+    <hr>
+
+    <p id="clickP" onclick="clickText()">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum fugit animi illo unde, numquam eaque neque obcaecati, alias modi eos explicabo sunt, error voluptatum ipsam quam ad nulla ducimus! Mollitia!</p>
+    <hr>
+
+    <!-- при нажатии на каждый элемент списка будет меняться цвет какого-то селектора например -->
+    <ol>
+        <li onclick="changeColor('li')">li</li>
+        <li onclick="changeColor('a')">a</li>
+        <li onclick="changeColor('p')">p</li>
+        <li onclick="changeColor('ol')">ol</li>
+        <li onclick="changeColor('#myA')">myA</li>
+    </ol>
+
+    <!-- изображение будет скрыто при двойном клике благодаря ondblclick -->
+    <img src="https://image.shutterstock.com/image-vector/img-file-document-icon-260nw-1356823577.jpg" ondblclick = "imgHide()">
+    <hr>
+
+    <!-- ondrag - когда начинаешь тащить обьект срабатывает , ondragend - когда тащил элемент и сработает тогда , когда уже отпустил -->
+    <a href="#" ondrag="cColor('a', 'red')">ondrag</a>
+    <!-- <span ondragend = 'cColor("span", "blue")'>ondragend</span> -->
+    <!-- работает только с теми элементами которые можно потащить -->
+    <img src="https://image.shutterstock.com/image-vector/img-file-document-icon-260nw-1356823577.jpg" ondragend = 'cColor("ol", "blue")'>
+    <hr>
+
+    <!-- onfocus срабатывает когда мы доабвляем фокус на наш элемент
+    onblur - когда фокус с элемента убираем 
+    onmouseover - при наведении мышкой на обьект
+    onmouseout - после наведения когда мышку убираешь -->
+    <input type="text" onfocus="fokusPokus()" id="fokusP" onblur="fokusaNema()" onmouseover="onMouse('red')" onmouseout="onMouse('silver')">
+
+    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus veniam, aliquid natus totam quaerat distinctio eaque aspernatur unde inventore ipsum molestias ducimus beatae iste cum eos harum labore rerum tempora.</span>
+                                                                        
+    <textarea name="textarea" id="textarea" cols="100" rows="10"></textarea>  
+
+    <div class="block">Мой текст</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <script src="js/index.js"></script>
