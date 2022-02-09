@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>html5 Теги</title>
+</head>
+<body>
+    <center>
+        <h1>
+            Здесь мы рассмотри штмл5 теги которые могут плохо работать в бразуерах
+        </h1>
+    </center>
+    
+    <p>
+        <embed src="https://www.youtube.com/watch?v=zRyMDDXhkW0&list=RDzRyMDDXhkW0&start_radio=1" width="100%" height="400px" type="">НУЖЕН ДЛЯ встраивания другого сайта внутрь моего сайта </embed>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zRyMDDXhkW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>можно с помощью аналога ембеда встроить в наш сайт скажем видео из ютуба </iframe>
+    </p>
+
+    <p>
+        <input list="cars">
+        <datalist id="cars">
+            <option value="Audi">
+            <option value="BMW">
+            <option value="Volvo">
+        </datalist>
+        ето такая прикольная штука которая позволяет нам выбрать значение или начинать вводить значение и нам будет предлагаться выбор 
+    </p>
+
+    <p>
+        чтобы создать скрытый текст
+        <details>
+            <summary>показать</summary>
+            <p>скрытый текст</p>
+        </details>
+    </p>
+
+    <p>
+        для создания аудиодорожки , атрибут контролс дает нам кнопки для того чтобы остановить например мелодию
+        <audio controls>
+            <source src="http://goldenland.onfind.net/2/1/2.mp3" type="audio/ogg; codecs=vorbis"> если что-то не работает то выведется вот этот текст который записан внутри нашего тега
+        </audio>
+    </p>
+
+    <p>
+        тег прогрес создает прогрес бар где валюе - значение которое у нас есть а макс - максимальное значение и мы видим только шкалу заполненности (без подписей процентов и т д )
+        <progress value="50" max="100">0%</progress>
+    </p>
+
+    <p>
+        аналог прогреса но больше похож на батарейку. В теге метр есть дополнительные атрибуты. атрибут лов делает так что шкала ниже какого-то значения становится не зеленой , а желтой. И аналог лов есть хай, высше которого у нас шкала так же будет желтой
+        <meter value="50" max="100" low="30" high="70"></meter>
+    </p>
+</body>
+</html>

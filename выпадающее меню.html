@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Изначально работаем над всем списком в целом */
+    #navbar_example ul {
+	    display: none;
+	    background-color: #f90;
+	    position: absolute;
+	    top: 100%;
+    }
+
+    /* При наведении на элемент список становиться блоком */
+    #navbar_example li:hover ul {
+        display: block;
+    }
+
+    /* Удаляем все отступы */
+    #navbar_example, #navbar_example ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    /* Общий стиль для блока меню */
+    #navbar_example {
+        height: 30px;
+        background-color: #666;
+        padding-left: 25px;
+        min-width: 470px;
+    }
+
+    /* Стили для каждого из элементов */
+    #navbar_example li {
+        float: left;
+        position: relative;
+        height: 100%;
+    }
+
+    /* Стили для ссылок в элементах меню */
+    #navbar_example li a {
+        display: block;
+        padding: 6px;
+        width: 100px;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    /* Убираем позиционирование в элементах */
+    #navbar_example ul li {float: none;}
+
+    /* Эффект при наведении */
+    #navbar_example li:hover {background-color: #f90;}
+
+    #navbar_example ul li:hover {
+        background-color: #666;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <ul id="navbar_example">
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Новости</a></li>
+            <li class="kontacts"><a href="#">Контакты</a>
+    
+                <ul>
+                    <li><a href="#">Адрес</a></li>
+                    <li><a href="#">Телефон</a></li>
+                    <li><a href="#">Email</a></li>
+                </ul>
+            </li>
+            <li><a href="#">О нас</a></li>
+        </ul>
+    </div>
+</body>
+</html>

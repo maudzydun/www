@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        домашняя работа
+    </title>
+</head>
+<body>
+    <h2>
+        <center>
+            Мини Веб Сайт 
+        </center>
+    </h2>
+
+    <table>
+        <tr>
+            <td>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvdOhNlUg6aSMxbztSF-qbGEGk52PPAgHiyw&usqp=CAU" alt="сеньер помидор" width="300px">
+            </td>
+            <td>
+                <p>
+                    Информация про <mark>Изображение</mark> : <hr>
+                    <details>
+                        <summary>
+                            подробнее
+                        </summary>
+                        <p>
+                            ну типо шутка в стиле сеньер помидор - прикольно же
+                        </p>
+                    </details>
+                    <audio controls>
+                        <source src="http://goldenland.onfind.net/2/1/2.mp3" type="audio/ogg; codecs=vorbis">
+                            если что-то не работает то выведется вот этот текст который записан внутри нашего тега
+                    </audio>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <iframe width="300" height="100%" src="https://www.youtube.com/embed/n0xtO0x81cg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    видео урок по питону
+                </iframe>
+            </td>
+            <td>
+                <h3>Наши преимущества:</h3>
+                <p>
+                    <ul>
+                        <li>
+                            Крутые <a href="">цены</a> ;
+                        </li>
+                        <li>
+                            Большой выбор;
+                        </li>
+                        <li>
+                            Хорошие специалисты;
+                        </li>
+                    </ul>
+                </p>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <h1>Зарегистрироваться на событие</h1>
+        <p>
+            <form action="" method="post" enctype="multipart/form-data">
+                <label for="name">
+                    Имя
+                </label>
+                <input type="text" id="name" name="name" placeholder="Введите имя">
+                <br>
+                <label for="email">
+                    Email
+                </label>
+                <input type="email" id="email" name="email" placeholder="Введите email">
+                <br>
+                <label for="pass">
+                    Пароль
+                </label>
+                <input type="password" id="pass" name="password" placeholder="Введите пароль">
+                <br>
+                <label for="foto">
+                    Фото профиля
+                </label>
+                <input type="file" name="foto" id="foto" >
+                <br>
+                <input list="expir" placeholder="опыт в програмировании">
+                <datalist id="expir">
+                    <option value="меньше года">
+                    <option value="1-2 года">
+                    <option value="2-3 года">
+                    <option value="3-5 лет"></option>
+                    <option value="больше 5 лет">
+                </datalist>
+                <br>
+                <select name="favlang" id="">
+                    <option value="label" disabled selected>Любимый язык</option>
+                    <option value="Python">Python</option>
+                    <option value="PHP">PHP</option>
+                    <option value="C">C</option>
+                    <option value="C++">C++</option>
+                    <option value="Java">Java</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select>
+                <br>
+                <input type="checkbox" name="agree" id="agree"> Пользовательское соглашение
+                <br>
+                <input type="submit" name="send">
+                <button type="reset" name="reset" id="reset">
+                    Очистить
+                </button>
+            </form>
+        </p>
+    </div>
+</body>
+</html>
