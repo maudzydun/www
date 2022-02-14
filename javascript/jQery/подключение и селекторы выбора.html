@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="css/style_for_javascript.css">
+</head>
+<body>
+    <h1 id="hi">Заголовок</h1>
+    <div class="di">
+        <p>Абзац1</p>
+        <p id="pi">Абзац1</p>
+        <span id="sp">Абзац1</span>
+    </div>
+
+   <!-- Подключение jQuery -->
+
+    <script src="jQery/jquery-3.6.0.min.js"></script>
+    <!-- или -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- ВАЖНО !!!!!!!! Код jQuery нужно прописывать после его подключения -->
+
+    <!-- Анонимная функция для того чтобы решить проблему когда работаем на проэкте в котором исспользуется и jQuery и $ -->
+    <script>
+        ;(function($, undefined){
+            // и внтри этой анонимной функции можно присать как jQuery так и знак $
+        })(jQuery);
+    </script>
+
+
+
+    <!-- Селекторы выбора -->
+    <script>
+        // слелекторы точно такие же как и в css 
+        $("h1 , .di span").hide();
+
+        // селекторы jQuery
+        $("p").first().hide(); //скрывает первый найденый тег p
+        // .last() - противоположна и берет последний обьект
+        $("p").next().hide() // - скрывает следующий обьект после тега п, под наш селектор попадают 2 элемента id="pi и id="sp"
+        // .prev() - работает так же как некст но берет предыдущий обьект
+        // .parent() - можно применить к примеру к id="pi - парент скроет div class="di"
+        // .children() - применяем к div class="di" , скрываются все абзацы и спаны внутри этого дива
+    </script>
+
+
+</body>
+</html>
